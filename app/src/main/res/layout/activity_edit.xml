@@ -26,7 +26,7 @@
         android:layout_marginTop="8dp"
         android:ems="10"
         android:hint="@string/postal_hint"
-        android:inputType="@string/postal_hint"
+        android:inputType="number"
         app:layout_constraintStart_toStartOf="@+id/companyEdit"
         app:layout_constraintTop_toBottomOf="@+id/companyEdit" />
 
@@ -42,7 +42,7 @@
         app:layout_constraintTop_toBottomOf="@+id/postalEdit" />
 
     <EditText
-        android:id="@+id/tellEdit"
+        android:id="@+id/telEdit"
         android:layout_width="350dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
@@ -60,8 +60,8 @@
         android:ems="10"
         android:hint="FAX"
         android:inputType="phone"
-        app:layout_constraintStart_toStartOf="@+id/tellEdit"
-        app:layout_constraintTop_toBottomOf="@+id/tellEdit" />
+        app:layout_constraintStart_toStartOf="@+id/telEdit"
+        app:layout_constraintTop_toBottomOf="@+id/telEdit" />
 
     <EditText
         android:id="@+id/emailEdit"
