@@ -4,13 +4,35 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.preference.PreferenceManager
 import kotlinx.android.synthetic.main.activity_edit.*
-import java.util.prefs.PreferenceChangeEvent
+
 
 class EditActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_edit)
 
+        PreferenceManager.getDefaultSharedPreferences(this).apply {
+            val company = getString("company", "")
+            val postal = getString("postal", "")
+            val address = getString("address", "")
+            val tel = getString("tel", "")
+            val fax = getString("fax", "")
+            val email = getString("email", "")
+            val url = getString("url", "")
+            val position = getString("position", "")
+            val name = getString("name", "")
+
+            companyEdit.setText(company)
+            postalEdit.setText(postal)
+            addressEdit.setText(address)
+            telEdit.setText(tel)
+            faxEdit.setText(fax)
+            emailEdit.setText(email)
+            urlEdit.setText(url)
+            positionEdit.setText(position)
+            nameEdit.setText(name)
+        }
+        /*
         val pref = PreferenceManager.getDefaultSharedPreferences(this)
         val company = pref.getString("company","")
         val postal = pref.getString("postal","")
@@ -31,7 +53,7 @@ class EditActivity : AppCompatActivity() {
         urlEdit.setText(url)
         positionEdit.setText(position)
         nameEdit.setText(name)
-
+        */
         saveBtn.setOnClickListener(){
             saveData()
             finish()
